@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-image: url("./files/Premium Photo _ Spring cherry blossom with Mount Fuji in the background Generative ai.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.hero div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero div h1 {
+  font-size: 6rem;
+  color: #0cce49;
+}
+
+.hero div p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.developer {
+  color: #0caceb;
+}
+
+.hero div button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: 2px solid #f30f0f;
+  cursor: pointer;
+
+  transition: background-color 0.2s linear, color 0.2s linear;
+
+  background-color: #f30f0f;
+  color: #fff;
+
+  animation: scale-btn 2s linear infinite;
+}
+
+.hero div button:hover {
+  background-color: #fff;
+  color: #f30f0f;
+}
+
+@keyframes scale-btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* social links */
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+  width: 5rem;
+  height: fit-content;
+  opacity: 0;
+  transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.social-links img {
+  width: 50px;
+  height: 50px;
+}
+
+.social-links a {
+  transition: transform 0.2s linear;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* social links ends */
+
+/* projects */
+
+.projects {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  background-image: url("./files/universe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.projects h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.projects .projects-text {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: #e6e1e1;
+}
+
+.projects .projects-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.projects .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 300px;
+
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+
+  transition: transform 0.2s linear;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project-card h3 {
+  font-size: 1.5rem;
+  color: #f30f0f;
+}
+
+.projects .project-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects .project-card p {
+  text-align: center;
+  padding: 15px;
+  padding-top: 0;
+  color: #d8d4d4;
+}
+
+.projects .project-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* projects ends */
+
+/* media queries  */
+
+@media screen and (max-width: 768px) {
+  .social-links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects .projects-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero div h1 {
+    font-size: 4rem;
+  }
+  .hero div p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero div h1 {
+    font-size: 3rem;
+  }
+  .hero div p {
+    font-size: 1.2rem;
+  }
+}
+
+/* media queries ends */
